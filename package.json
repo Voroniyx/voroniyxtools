@@ -10,5 +10,12 @@
     "src/**/*"
   ],
   "website":"https://tools.voroniyx.xyz",
-  "discord":"https://voroniyx.xyz -> Discord"
+  "discord":"https://voroniyx.xyz -> Discord",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Voroniyx/voroniyxtools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Voroniyx/voroniyxtools/issues"
+  }
 }
