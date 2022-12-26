@@ -39,4 +39,4 @@ console.log(g.getString()) //a string. example: kqVkl
 
 
 For Bug Reports or any Issues join the Discord Server: https://voroniyx.xyz -> "Discord"
-~ Voroniyx
+~ **Voroniyx**
