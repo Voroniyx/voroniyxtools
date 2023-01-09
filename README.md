@@ -15,7 +15,7 @@ const {createTimestamp,TimestampTypes} = require('voronstools/src/main.cjs');
 
 An example code can look like this:
 ```js
-import {createTimestamp,TimestampTypes, generateRandomString} from 'voronstools'; // improts the classes and TimestampTypes Objekt
+import {createTimestamp,TimestampTypes, generateRandomString} from 'voronstools'; // imports the classes and TimestampTypes Objekt
 
 //creates a new class whit a given Date and Type
 let createdDiscordTimestamp = new createTimestamp({
