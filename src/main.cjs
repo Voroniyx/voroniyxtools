@@ -6,6 +6,10 @@
 //           < option value = "<t:unix:R>" > In / Ago < /option>
 //             < option value = "<t:unix:T>" > Full Time < /option>
 
+/**
+ * Timestamp Generator
+ */
+
 const TimestampTypes = {
     Date: "<t:unix:d>",
     FullDate: "<t:unix:f>",
@@ -18,7 +22,7 @@ const TimestampTypes = {
 /**@enum */
 const ErrorEnum = {
     WrongType: "The given date is not a type of `Date` or it is NaN",
-    ErrorLenght:"The lenght should be bigger then 3 and maximum 46"
+    ErrorLenght: "The lenght should be bigger then 3 and maximum 46"
 }
 
 /**@interface */
@@ -53,10 +57,12 @@ class createTimestamp {
     }
 }
 
-
+/**
+ * Random String
+ */
 
 let NumberOption = {
-    lenght:Number
+    lenght: Number
 }
 class generateRandomString {
     /** @private*/
@@ -65,7 +71,7 @@ class generateRandomString {
         this.lenght = option.lenght
     }
 
-    getString(){
+    getString() {
         if (3 >= this.lenght || 47 <= this.lenght) throw new Error(ErrorEnum.ErrorLenght)
         else {
             let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -79,5 +85,47 @@ class generateRandomString {
 
 }
 
-module.exports = { TimestampTypes, createTimestamp, generateRandomString }
+
+/**
+ * Channel Type Converter
+ */
+
+const ChannelType = {
+    0: "GuildText",
+    1: "DM",
+    2: "GuildVoice",
+    3: "GroupDM",
+    4: "GuildCategory",
+    5: "GuildNews",
+    10: "GuildNewsThread",
+    11: "GuildPublicThread",
+    12: "GuildPrivateThread",
+    13: "GuildStageVoice",
+    14: "GuildDirectory",
+    15: "GuildForum"
+}
+
+class ChannelTypeConverter {
+    /**
+    * @name "ChannelTypeConverter" 
+    */
+    constructor(number) {
+        this.number = number
+    }
+    /**
+     * 
+     * @param {Number} number 
+     * @returns 
+     */
+    resolve(number) {
+        let error = 'Not Supported'
+        let numberArray = [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14, 15]
+        if (numberArray.includes(number)) {
+            return ChannelType[number]
+        }
+        else return error;
+    }
+}
+
+module.exports = { TimestampTypes, createTimestamp, generateRandomString, ChannelTypeConverter, ChannelType }
 
