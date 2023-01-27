@@ -1,46 +1,33 @@
 # Voroniyx Tools
-Web: https://tools.voroniyx.xyz
+Web: https://voroniyx.xyz/voronstools
 
 This Module is cjs and mjs compatible
+The old `class` exports are now functions
 
-The Standart Export ist mjs for modules
-```mjs
-import {createTimestamp,TimestampTypes} from 'voronstools';
-```
-
-For CommonJS / cjs use this import:
-```cjs
-const {createTimestamp,TimestampTypes} = require('voronstools/src/main.cjs');
-```
-
-An example code can look like this:
+About the Typescript Types and some other Stuff its no possible to import all directly from 'voronstools' without the extra path for cjs
 ```js
-import {createTimestamp,TimestampTypes, generateRandomString, ChannelTypeConverter, ChannelType} from 'voronstools'; // imports the classes and TimestampTypes Objekt
+//Example 1 Import
+import voronstools from 'voronstools' //The module 'voronstools' is a CommonJS module, which may not support all module.exports as named exports.
+const {TimestampTypes,channelTypeConverter,randomString,timestampGen} = voronstools
 
-//creates a new class whit a given Date and Type
-let createdDiscordTimestamp = new createTimestamp({
-    Date:Date.now(),
-    Type:TimestampTypes.Date
-})
+//Example 2 Import
+const {TimestampTypes,channelTypeConverter,randomString,timestampGen} = require('voronstools')
 
-// logs the class
-console.log(createdDiscordTimestamp) // createTimestamp { date: 1670964081583, type: '<t:unix:d>' }
-// logs the generated Timestamp from your given Date
-console.log(createdDiscordTimestamp.getDate()) //<t:1670964081:d>
+//channelTypeConverter
+console.log(channelTypeConverter({channelType:13})) //Types are avalabil over Intellisense 
+//GuildStageVoice
 
-//creates a new class to generate a new random string
-let createdString = new generateRandomString({lenght:5}) //the minmum lenght is 4 and the maximum is 46
+//randomString
+console.log(randomString({lenght:16})) //the minmum lenght is 4 and the maximum is 46
+//example: DLVIqRmIgrtC9T6A
 
-//logs the class
-console.log(createdString) //generateRandomString { lenght: 5 }
-//logs the string
-console.log(createdString.getString()) //a string. example: kqVkl
-
-//ChannelTypeConverter
-console.log(ChannelTypeConverter.resolve(5)) //GuildNews
+//timestampGenerator
+console.log(timestampGen({
+    date:new Date, //just an example date
+    type:TimestampTypes.DescriptiveFull 
+}))
+//<t:1674820431:F>
 ```
 
-
-
-For Bug Reports or any Issues join the Discord Server: https://voroniyx.xyz -> "Discord"
+For Bug Reports or any Issues join the Discord Server: https://voroniyx.xyz/discordserver
 ~ **Voroniyx**

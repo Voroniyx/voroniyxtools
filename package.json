@@ -1,15 +1,11 @@
 {
   "name": "voronstools",
-  "version": "1.1.0",
-  "keywords": [],
+  "version": "2.0.0",
+  "description": "Voronyix Tool Package",
+  "main": "index.js",
+  "types": "index.d.ts",
   "author": "Voroniyx",
   "license": "MIT",
-  "description": "Voronyix Tool Package",
-  "main": "src/main.mjs",
-  "files": [
-    "src/**/*"
-  ],
-  "website":"https://tools.voroniyx.xyz",
   "discord":"https://voroniyx.xyz -> Discord",
   "repository": {
     "type": "git",
