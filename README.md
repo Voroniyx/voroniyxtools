@@ -8,10 +8,10 @@ Via the Typescript Types and some other things it is now possible to import ever
 ```js
 //Example 1 Import
 import voronstools from 'voronstools' //The module 'voronstools' is a CommonJS module that may not support all module.exports as named exports.
-const {TimestampTypes,channelTypeConverter,randomString,timestampGen} = voronstools
+const {TimestampTypes,channelTypeConverter,randomString,timestampGen, ansiGenerator, Colors} = voronstools
 
 //Example 2 Import
-const {TimestampTypes,channelTypeConverter,randomString,timestampGen} = require('voronstools')
+const {TimestampTypes,channelTypeConverter,randomString,timestampGen, ansiGenerator, Colors} = require('voronstools')
 
 //channelTypeConverter
 console.log(channelTypeConverter({channelType:13})) //Types are available via Intellisense 
@@ -27,6 +27,9 @@ console.log(timestampGen({
     type:TimestampTypes.DescriptiveFull 
 }))
 //<t:1674820431:F>
+
+//ansiGenerator
+ansiGenerator('A content',Colors.yellow)
 ```
 
 For bug reports or other issues, visit the Discord server: https://voroniyx.xyz/discordserver

@@ -1,6 +1,6 @@
 {
   "name": "voronstools",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Voronyix Tool Package",
   "main": "index.js",
   "types": "index.d.ts",
