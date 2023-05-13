@@ -1,5 +1,4 @@
 # Voroniyx Tools
-Web: https://voroniyx.xyz/voronstools
 
 This Module is cjs and mjs compatible.
 The old `class` exports are now functions.
@@ -32,5 +31,4 @@ console.log(timestampGen({
 ansiGenerator('A content',Colors.yellow)
 ```
 
-For bug reports or other issues, visit the Discord server: https://voroniyx.xyz/discordserver
 ~ **Voroniyx**
