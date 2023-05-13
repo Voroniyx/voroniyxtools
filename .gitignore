@@ -1,3 +1,5 @@
 package-lock.json
-notes.txt
+publish.txt
 .git
+src
+node_modules

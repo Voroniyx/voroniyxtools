@@ -1,17 +1,22 @@
 {
   "name": "voronstools",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Voronyix Tool Package",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "author": "Voroniyx",
   "license": "MIT",
-  "discord":"https://voroniyx.xyz -> Discord",
+  "scripts": {
+    "build":"tsc"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:Voroniyx/voroniyxtools.git"
   },
   "bugs": {
     "url": "https://github.com/Voroniyx/voroniyxtools/issues"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4"
   }
 }
