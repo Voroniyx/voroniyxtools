@@ -1,5 +1,5 @@
 package-lock.json
 publish.txt
 .git
-src
+lib
 node_modules
